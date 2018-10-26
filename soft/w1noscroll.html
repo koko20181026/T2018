@@ -38,21 +38,29 @@
         z-index: 100;
         padding: 10px;
     }
+    
+    .physickey{
+     background:gray;
+     height:50px;
+     font-size: 25px;
+    }
+    
 </style>
 <script>
 var offsettop;
 var ScrTop;
 $( window ).load(function() {
-     
-      $("input[type=text]").mouseup(function(key) {
+
+     $("input[type=text]").mouseup(function(key) {
+
         offsettop = $(key.target).offset().top;
 
         $('html, body').animate({scrollTop : offsettop}, 400);
 
         if ($("#modal").css("display") == "none") {
             $('#modal').css("top", offsettop + 1000);
-            $('#modal').fadeIn({queue : false,duration : 400});
-            $('#modal').animate({top : offsettop + 50}, 400);
+            $('#modal').fadeIn({queue : false,duration : 300});
+            $('#modal').animate({top : offsettop + 50}, 300);
 
             var modalHeight = $("#modal").height();
             ScrTop = $(document).scrollTop();            
@@ -70,8 +78,25 @@ $( window ).load(function() {
             switchLayout : qwertyLayout02,
             onKeypress : keypad_OnKeypress,
             keypadOnly : false
-      });
+        });
     });
+    
+    
+    $(".physickey").mouseup(function(key) {
+         $("input[type=text]").each(function(i,e){
+            if(e.readOnly === false){
+            
+            $(".physickey").css("background","green");
+            
+            
+                e.readOnly = true;
+            }else{
+                e.readOnly = false;
+                            $(".physickey").css("background","gray");
+            }
+        });
+    });
+
     
 });
 </script>
@@ -85,7 +110,7 @@ $( window ).load(function() {
     <div id="mainContents">
       <div id="search-items">
         <span>項目１：</span><input type="text" style="width:200px;" value="" id="dummy1" maxlength="28">
-        <span>項目２：</span><input type="text" style="width:200px;" value="" id="dummy2" maxlength="28">
+        <span>項目２：</span><input type="text" style="width:200px;" value="" id="dummy2" maxlength="28"><input type="button" class="physickey" value="物理キーボード">
        <br />
         <span>項目３：</span><input type="text" style="width:200px;" value="" id="dummy3" maxlength="28">
         <span>項目４：</span><input type="text" style="width:200px;" value="" id="dummy4" maxlength="28">
@@ -302,7 +327,7 @@ $( window ).load(function() {
         #modalclose{
             position: absolute;
             top: 0;
-            left:700px;
+            left:850px;
         }
       </style>
 
@@ -311,28 +336,26 @@ $( window ).load(function() {
 $( window ).load(function() {
 
 $(document).on("click touchstart","#modalclose",function(){
-
         if ($("#modal").css("display") != "none") {
-            $('#modal').fadeOut({queue : false,duration : 400});
-            $('#modal').animate({top : offsettop + 600}, 400);
+            $('#modal').fadeOut({queue : false,duration : 500});
+            $('#modal').animate({top : offsettop + 600}, 500);
 
-            $('html, body').animate({scrollTop : ScrTop}, 400);
+            $('html, body').animate({scrollTop : ScrTop}, 500);
             $("#dummyT").empty();
         }
     });
 
     $("input").keydown(function(key) {
         if (key.keyCode == 13 && ($("#modal").css("display") != "none")) {
-                $('#modal').fadeOut({queue : false,duration : 400});
-                $('#modal').animate({top : offsettop + 600}, 400);
+                $('#modal').fadeOut({queue : false,duration : 500});
+                $('#modal').animate({top : offsettop + 600}, 500);
 
-                $('html, body').animate({scrollTop : ScrTop}, 400);
+                $('html, body').animate({scrollTop : ScrTop}, 500);
                 $("#dummyT").empty();
         }
     });
 
     $("input[type=text]").mouseup(function(key) {
-
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
