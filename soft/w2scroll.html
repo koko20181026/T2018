@@ -48,12 +48,12 @@ $( window ).load(function() {
 
         offsettop = $(key.target).offset().top;
 
-        $('html, body').animate({scrollTop : offsettop}, 400);
+        $('html, body').animate({scrollTop : offsettop}, 700);
 
         if ($("#modal").css("display") == "none") {
             $('#modal').css("top", offsettop + 1000);
-            $('#modal').fadeIn({queue : false,duration : 300});
-            $('#modal').animate({top : offsettop + 50}, 300);
+            $('#modal').fadeIn({queue : false,duration : 700});
+            $('#modal').animate({top : offsettop + 50}, 700);
 
             var modalHeight = $("#modal").height();
             ScrTop = $(document).scrollTop();            
@@ -323,20 +323,20 @@ $( window ).load(function() {
 
     $(document).on("click touchstart","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
-            $('#modal').fadeOut({queue : false,duration : 300});
-            $('#modal').animate({top : offsettop + 600}, 300);
+            $('#modal').fadeOut({queue : false,duration : 700});
+            $('#modal').animate({top : offsettop + 600}, 700);
 
-            $('html, body').animate({scrollTop : ScrTop}, 300);
+            $('html, body').animate({scrollTop : ScrTop}, 700);
             $("#dummyT").empty();
         }
     });
 
     $("input").keydown(function(key) {
         if (key.keyCode == 13 && ($("#modal").css("display") != "none")) {
-                $('#modal').fadeOut({queue : false,duration : 300});
-                $('#modal').animate({top : offsettop + 600}, 300);
+                $('#modal').fadeOut({queue : false,duration : 700});
+                $('#modal').animate({top : offsettop + 600}, 700);
 
-                $('html, body').animate({scrollTop : ScrTop}, 300);
+                $('html, body').animate({scrollTop : ScrTop}, 700);
                 $("#dummyT").empty();
         }
     });
