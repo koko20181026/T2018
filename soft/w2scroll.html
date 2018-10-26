@@ -39,9 +39,15 @@
         padding: 10px;
     }
     .physickey{
-     background:gray;
-     height:50px;
-     font-size: 25px;
+         background:green;
+         height:50px;
+         font-size: 25px;
+         border-radius: 10px;
+          position: absolute;
+          left:950px;
+    }
+    body{
+        -webkit-text-size-adjust: 100%;
     }
     
 </style>
@@ -51,6 +57,10 @@
 $( window ).load(function() {
 
     $("input[type=text]").mouseup(function(key) {
+
+$("input[type=text]").each(function(i,e){
+     e.readOnly = true;
+});
 
         offsettop = $(key.target).offset().top;
 
@@ -100,12 +110,12 @@ $(".physickey").css("background","gray");
 <body>
   <div id="wrapper">
     <div id="pageTitileName">
-     画面2(スクロール)
+     画面2(スクロール)<input type="button" class="physickey" value="物理キーボード">
     </div>
     <div id="mainContents">
       <div id="search-items">
         <span>項目１：</span><input type="text" style="width:200px;" value="" id="dummy1" maxlength="28">
-        <span>項目２：</span><input type="text" style="width:200px;" value="" id="dummy2" maxlength="28"><input type="button" class="physickey" value="物理キーボード">
+        <span>項目２：</span><input type="text" style="width:200px;" value="" id="dummy2" maxlength="28">
        <br /><br />
         <span>項目３：</span><input type="text" style="width:200px;" value="" id="dummy3" maxlength="28">
         <span>項目４：</span><input type="text" style="width:200px;" value="" id="dummy4" maxlength="28">
@@ -333,8 +343,9 @@ $(".physickey").css("background","gray");
         #modalclose{
             position: absolute;
             top: 0;
-            left:850px;
+            left:950px;
         }
+
       </style>
 
 <script>

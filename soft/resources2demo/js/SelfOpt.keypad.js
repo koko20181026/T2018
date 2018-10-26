@@ -180,11 +180,21 @@ var kanaLayout02 = [
         'ｵｺｿﾄﾉﾎﾓｰﾛﾟ' +$.keypad.HALF_SPACE +'ｫ'+ $.keypad.SPACE + $.keypad.HALF_SPACE+ $.keypad.ZaiDanHouJin,
         $.keypad.SPACE_BAR + $.keypad.BACK + $.keypad.CLEAR + $.keypad.SWITCH ];
 */
+/*
 var kanaLayout02 = [
         'ｱｶｻﾀﾅﾊﾏﾔﾗﾜ'  +  $.keypad.HALF_SPACE+ 'ｧｬ',
         'ｲｷｼﾁﾆﾋﾐﾕﾘｦ' +  $.keypad.HALF_SPACE+ 'ｨｭ',
         'ｳｸｽﾂﾇﾌﾑﾖﾙﾝ'  +  $.keypad.HALF_SPACE+ 'ｩｮ',
         'ｴｹｾﾃﾈﾍﾒ' + $.keypad.SPACE + 'ﾚﾞ'  +  $.keypad.HALF_SPACE+ 'ｪｯ',
+        'ｵｺｿﾄﾉﾎﾓｰﾛﾟ' +$.keypad.HALF_SPACE +'ｫ',
+        $.keypad.SPACE_BAR + $.keypad.BACK + $.keypad.CLEAR ];
+*/        
+        
+var kanaLayout02 = [
+        'ｱｶｻﾀﾅﾊﾏﾔﾗﾜ'  +  $.keypad.HALF_SPACE+ 'ｧｬ',
+        'ｲｷｼﾁﾆﾋﾐﾕﾘｦ' +  $.keypad.HALF_SPACE+ 'ｨｭ',
+        'ｳｸｽﾂﾇﾌﾑﾖﾙﾝ'  +  $.keypad.HALF_SPACE+ 'ｩｮ',
+        'ｴｹｾﾃﾈﾍﾒ'  +  $.keypad.SPACE+ 'ﾚﾞ'  +  $.keypad.HALF_SPACE+ 'ｪｯ',
         'ｵｺｿﾄﾉﾎﾓｰﾛﾟ' +$.keypad.HALF_SPACE +'ｫ',
         $.keypad.SPACE_BAR + $.keypad.BACK + $.keypad.CLEAR ];
 

@@ -40,16 +40,25 @@
     }
     
     .physickey{
-     background:gray;
-     height:50px;
-     font-size: 25px;
+         background:green;
+         height:50px;
+         font-size: 25px;
+         border-radius: 10px;
+                   position: absolute;
+          left:950px;
     }
-    
+    body{
+        -webkit-text-size-adjust: 100%;
+    }
 </style>
 <script>
 var offsettop;
 var ScrTop;
 $( window ).load(function() {
+
+$("input[type=text]").each(function(i,e){
+     e.readOnly = true;
+});
 
      $("input[type=text]").mouseup(function(key) {
 
@@ -87,12 +96,10 @@ $( window ).load(function() {
             if(e.readOnly === false){
             
             $(".physickey").css("background","green");
-            
-            
                 e.readOnly = true;
             }else{
                 e.readOnly = false;
-                            $(".physickey").css("background","gray");
+                $(".physickey").css("background","gray");
             }
         });
     });
@@ -105,12 +112,12 @@ $( window ).load(function() {
 <body>
   <div id="wrapper">
     <div id="pageTitileName">
-     画面1(スクロール無)
+     画面1(スクロール無)<input type="button" class="physickey" value="物理キーボード">
     </div>
     <div id="mainContents">
       <div id="search-items">
         <span>項目１：</span><input type="text" style="width:200px;" value="" id="dummy1" maxlength="28">
-        <span>項目２：</span><input type="text" style="width:200px;" value="" id="dummy2" maxlength="28"><input type="button" class="physickey" value="物理キーボード">
+        <span>項目２：</span><input type="text" style="width:200px;" value="" id="dummy2" maxlength="28">
        <br />
         <span>項目３：</span><input type="text" style="width:200px;" value="" id="dummy3" maxlength="28">
         <span>項目４：</span><input type="text" style="width:200px;" value="" id="dummy4" maxlength="28">
@@ -327,7 +334,7 @@ $( window ).load(function() {
         #modalclose{
             position: absolute;
             top: 0;
-            left:850px;
+            left:950px;
         }
       </style>
 
