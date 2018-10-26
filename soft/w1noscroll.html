@@ -43,9 +43,18 @@
 var offsettop;
 var ScrTop;
 $( window ).load(function() {
-     
+     $("#nameKeypad").keypad({
+            target : $(key.target),
+            clearText : '全削除',
+            backText : '1文字削除',
+            spacebarText : 'ｽﾍﾟｰｽ',
+            switchText : '英数字選択',
+            layout : kanaLayout02,
+            switchLayout : qwertyLayout02,
+            onKeypress : keypad_OnKeypress,
+            keypadOnly : false
+      });
       $("input[type=text]").on("touchstart click ", function(key) {
-event.preventDefault();
         offsettop = $(key.target).offset().top;
 
         $('html, body').animate({scrollTop : offsettop}, 400);
@@ -60,18 +69,6 @@ event.preventDefault();
             var dummyT = $("<table></table>").css("border","0").css("height",modalHeight);
             $("#dummyT").append(dummyT);
         }
-        
-        $("#nameKeypad").keypad({
-            target : $(key.target),
-            clearText : '全削除',
-            backText : '1文字削除',
-            spacebarText : 'ｽﾍﾟｰｽ',
-            switchText : '英数字選択',
-            layout : kanaLayout02,
-            switchLayout : qwertyLayout02,
-            onKeypress : keypad_OnKeypress,
-            keypadOnly : false
-        });
     });
     
 });
@@ -312,7 +309,7 @@ event.preventDefault();
 $( window ).load(function() {
 
 $(document).on("click touchstart","#modalclose",function(){
-  event.preventDefault();
+
         if ($("#modal").css("display") != "none") {
             $('#modal').fadeOut({queue : false,duration : 400});
             $('#modal').animate({top : offsettop + 600}, 400);
@@ -333,7 +330,7 @@ $(document).on("click touchstart","#modalclose",function(){
     });
 
     $("input[type=text]").on("touchstart click ", function(key) {
-      event.preventDefault();
+
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
