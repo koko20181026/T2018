@@ -344,8 +344,8 @@ body{
 }
 
 #nameKeypad .keypad-key {
-  width: 35px;
-  height: 35px;
+  width: 70px;
+  height: 70px;
   line-height: 32px;
   margin: 0 0 12px 10px;
   font-family: sans-serif;
