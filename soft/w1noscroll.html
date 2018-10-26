@@ -44,7 +44,7 @@ var offsettop;
 var ScrTop;
 $( window ).load(function() {
      
-      $("input[type=text]").on("touchstart click ", function(key) {
+      $("input[type=text]").mouseup(function(key) {
         offsettop = $(key.target).offset().top;
 
         $('html, body').animate({scrollTop : offsettop}, 400);
@@ -331,7 +331,7 @@ $(document).on("click touchstart","#modalclose",function(){
         }
     });
 
-    $("input[type=text]").on("touchstart click ", function(key) {
+    $("input[type=text]").mouseup(function(key) {
 
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
