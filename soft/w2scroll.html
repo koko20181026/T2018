@@ -40,10 +40,10 @@
     }
 </style>
 <script>
-var offsettop;
-var ScrTop;
-$( document ).ready(function() {
-    
+    var offsettop;
+    var ScrTop;
+$( window ).load(function() {
+
     $("input[type=text]").mouseup(function(key) {
 
         offsettop = $(key.target).offset().top;
@@ -319,7 +319,7 @@ $( document ).ready(function() {
 
 <script>
 
-$( document ).ready(function() {
+$( window ).load(function() {
 
     $(document).on("click touchstart","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
