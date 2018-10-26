@@ -44,8 +44,8 @@ var offsettop;
 var ScrTop;
 $( window ).load(function() {
      
-     $("input[type=text]").mouseup(function(key) {
-
+      $("input[type=text]").on("touchstart click ", function(key) {
+event.preventDefault();
         offsettop = $(key.target).offset().top;
 
         $('html, body').animate({scrollTop : offsettop}, 700);
@@ -312,6 +312,7 @@ $( window ).load(function() {
 $( window ).load(function() {
 
 $(document).on("click touchstart","#modalclose",function(){
+  event.preventDefault();
         if ($("#modal").css("display") != "none") {
             $('#modal').fadeOut({queue : false,duration : 700});
             $('#modal').animate({top : offsettop + 600}, 700);
@@ -331,7 +332,8 @@ $(document).on("click touchstart","#modalclose",function(){
         }
     });
 
-    $("input[type=text]").mouseup(function(key) {
+    $("input[type=text]").on("touchstart click ", function(key) {
+      event.preventDefault();
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
