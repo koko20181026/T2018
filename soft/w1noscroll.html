@@ -43,17 +43,7 @@
 var offsettop;
 var ScrTop;
 $( window ).load(function() {
-     $("#nameKeypad").keypad({
-            target : $(key.target),
-            clearText : '全削除',
-            backText : '1文字削除',
-            spacebarText : 'ｽﾍﾟｰｽ',
-            switchText : '英数字選択',
-            layout : kanaLayout02,
-            switchLayout : qwertyLayout02,
-            onKeypress : keypad_OnKeypress,
-            keypadOnly : false
-      });
+     
       $("input[type=text]").on("touchstart click ", function(key) {
         offsettop = $(key.target).offset().top;
 
@@ -307,7 +297,17 @@ $( window ).load(function() {
 <script>
 
 $( window ).load(function() {
-
+$("#nameKeypad").keypad({
+            target : $(key.target),
+            clearText : '全削除',
+            backText : '1文字削除',
+            spacebarText : 'ｽﾍﾟｰｽ',
+            switchText : '英数字選択',
+            layout : kanaLayout02,
+            switchLayout : qwertyLayout02,
+            onKeypress : keypad_OnKeypress,
+            keypadOnly : false
+      });
 $(document).on("click touchstart","#modalclose",function(){
 
         if ($("#modal").css("display") != "none") {
