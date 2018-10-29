@@ -348,7 +348,7 @@ $("input[type=text]").each(function(i,e){
 
 $( window ).load(function() {
 
-$(document).on("mousedown","#modalclose",function(){
+$(document).on("click","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
             $('#modal').fadeOut({queue : false,duration : 500});
             $('#modal').animate({top : offsettop + 600}, 500);
@@ -369,7 +369,7 @@ $(document).on("mousedown","#modalclose",function(){
     });
 
   //  $("input[type=text]").mousedown(function(key) {
-    $("input[type=text]").on('mousedown',function(key) {
+    $("input[type=text]").on('click',function(key) {
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
