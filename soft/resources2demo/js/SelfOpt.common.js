@@ -54,7 +54,7 @@ function preventZoom() {
 
 	document.documentElement.addEventListener('touchend', function(event) {
 		var now = (new Date()).getTime();
-		if (now - lastTouchEnd <= 600) {
+		if (now - lastTouchEnd <= 1) {
 			event.preventDefault();
 		}
 		lastTouchEnd = now;
