@@ -60,6 +60,14 @@ $("input[type=text]").each(function(i,e){
      e.readOnly = true;
 });
 
+var a = "a";
+$(document).on("click","#bt",function(key){
+
+
+a +=a;
+$("#dummy1").val(a);
+
+});
   
  
  //    $("input[type=text]").mousedown(function(key) {
@@ -126,7 +134,7 @@ $("input[type=text]").each(function(i,e){
        <br />
         <span>項目３：</span><input type="text" style="width:200px;" value="" id="dummy3" maxlength="28">
         <span>項目４：</span><input type="text" style="width:200px;" value="" id="dummy4" maxlength="28">
-       <br /> <button id="bt" value="A">testA</button>
+       <br /> <button id="bt" >testA</button>
         <span>項目５：</span>
         <select name="year" class="year">
           <option value="000">&#24180;</option>
@@ -350,15 +358,6 @@ input[type="text"]:focus { background: #ffffcc;}
 <script>
 
 $( window ).load(function() {
-
-
-$(document).on("click","button",function(e){
-
-  if(e.target.ontouchstart !== undefined)
-  {
-    return;
-  }
-});
 
 
 
