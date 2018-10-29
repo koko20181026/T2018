@@ -59,7 +59,8 @@ $("input[type=text]").each(function(i,e){
     $(".physickey").css("background","green");
 });
 
-     $("input[type=text]").mousedown(function(key) {
+//     $("input[type=text]").mousedown(function(key) {
+       $("input[type=text]").on('click touchstart',function(key) {
 
         offsettop = $(key.target).offset().top;
 
@@ -362,7 +363,8 @@ $(document).on("click touchstart","#modalclose",function(){
         }
     });
 
-    $("input[type=text]").mousedown(function(key) {
+  //  $("input[type=text]").mousedown(function(key) {
+    $("input[type=text]").on('click touchstart',function(key) {
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
