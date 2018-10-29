@@ -56,7 +56,7 @@ $(function(){
   
   
   var touched = false;
-  $("#button").bind({
+  $("button").bind({
     'touchstart mousedown': function(e) { // PCにも対応させるなら、touchstartではなくmousedown
       touched = true;
       e.preventDefault(); // このイベントに紐つく動作をキャンセル
