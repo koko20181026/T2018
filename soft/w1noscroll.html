@@ -62,11 +62,11 @@ $("input[type=text]").each(function(i,e){
      e.readOnly = true;
     $(".physickey").css("background","green");
 });
-document.getElementById("input[type=text]").addEventListener('touchstart', event => {
+$("input[type=text]").addEventListener('touchstart', event => {
   event.preventDefault();
 }, false);
 //     $("input[type=text]").mousedown(function(key) {
-       $("input[type=text]").on('mousedown',function(key) {
+       $("input[type=text]").on('click',function(key) {
 
         offsettop = $(key.target).offset().top;
 
