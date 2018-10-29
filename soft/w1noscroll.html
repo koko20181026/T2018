@@ -59,7 +59,7 @@ $("input[type=text]").each(function(i,e){
     $(".physickey").css("background","green");
 });
 
-     $("input[type=text]").keydown(function(key) {
+     $("input[type=text]").mousedown(function(key) {
 
         offsettop = $(key.target).offset().top;
 
@@ -90,7 +90,7 @@ $("input[type=text]").each(function(i,e){
     });
     
     
-    $(".physickey").keydown(function(key) {
+    $(".physickey").mousedown(function(key) {
          $("input[type=text]").each(function(i,e){
             if(e.readOnly == false){
                 $(".physickey").css("background","green");
@@ -360,7 +360,7 @@ $(document).on("click touchstart","#modalclose",function(){
         }
     });
 
-    $("input[type=text]").keydown(function(key) {
+    $("input[type=text]").mousedown(function(key) {
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
