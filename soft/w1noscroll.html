@@ -82,8 +82,7 @@ $("input[type=text]").each(function(i,e){
             backText : '1文字削除',
             spacebarText : 'ｽﾍﾟｰｽ',
             switchText : '英数字選択',
-            layout : kanaLayout02,
-            switchLayout : qwertyLayout02,
+
             onKeypress : keypad_OnKeypress,
             keypadOnly : false
         });
@@ -363,7 +362,7 @@ $(document).on("click touchstart","#modalclose",function(){
     });
 
     $("input[type=text]").mousedown(function(key) {
-        $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+        $("#nameKeypad").keypad("option", { target:$(key.target)});
     });
 
 });
