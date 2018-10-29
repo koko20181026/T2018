@@ -64,7 +64,7 @@ $("input[type=text]").each(function(i,e){
 });
 
 //     $("input[type=text]").mousedown(function(key) {
-       $("input[type=text]").click(function(key) {
+ $(document).on("click","input[type=text]",function(key){
 
         offsettop = $(key.target).offset().top;
 
@@ -348,8 +348,7 @@ $("input[type=text]").each(function(i,e){
 
 $( window ).load(function() {
 
-$("#modalclose").click(function(){
-  alsert("dd");
+$(document).on("click","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
             $('#modal').fadeOut({queue : false,duration : 500});
             $('#modal').animate({top : offsettop + 600}, 500);
@@ -359,7 +358,7 @@ $("#modalclose").click(function(){
         }
     });
 
-    $("input").keydown(function(key) {
+    $("input[type=text]").keydown(function(key) {
         if (key.keyCode == 13 && ($("#modal").css("display") != "none")) {
                 $('#modal').fadeOut({queue : false,duration : 500});
                 $('#modal').animate({top : offsettop + 600}, 500);
@@ -370,7 +369,7 @@ $("#modalclose").click(function(){
     });
 
   //  $("input[type=text]").mousedown(function(key) {
-    $("input[type=text]").click(function(key) {
+  $(document).on("click","input[type=text]",function(key){
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
