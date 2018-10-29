@@ -363,7 +363,6 @@ $(document).on("click touchstart","#modalclose",function(){
     });
 
     $("input[type=text]").mousedown(function(key) {
-      alert("s");
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
