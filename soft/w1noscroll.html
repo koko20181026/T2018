@@ -94,11 +94,11 @@ $("input[type=text]").each(function(i,e){
          $("input[type=text]").each(function(i,e){
             if(e.readOnly === false){
             
-            $(".physickey").css("background","green");
+            $(".physickey").css("background","gray");
                 e.readOnly = true;
             }else{
                 e.readOnly = false;
-                $(".physickey").css("background","gray");
+                $(".physickey").css("background","green");
             }
         });
     });
