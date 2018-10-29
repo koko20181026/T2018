@@ -41,7 +41,6 @@
     }
     
     .physickey{
-         background:green;
          height:50px;
          font-size: 25px;
          border-radius: 10px;
@@ -56,6 +55,7 @@ var ScrTop;
 $( window ).load(function() {
 
 $("input[type=text]").each(function(i,e){
+     $(".physickey").css("background","gray");
      e.readOnly = true;
 });
 
@@ -92,9 +92,8 @@ $("input[type=text]").each(function(i,e){
     
     $(".physickey").mouseup(function(key) {
          $("input[type=text]").each(function(i,e){
-            if(e.readOnly === false){
-            
-            $(".physickey").css("background","gray");
+            if(e.readOnly == false){
+                $(".physickey").css("background","gray");
                 e.readOnly = true;
             }else{
                 e.readOnly = false;
