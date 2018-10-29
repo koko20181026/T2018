@@ -66,7 +66,7 @@ element.addEventListener('touchstart', event => {
   event.preventDefault();
 }, false);
 //     $("input[type=text]").mousedown(function(key) {
-       $("input[type=text]").on('click touchstart',function(key) {
+       $("input[type=text]").on('mousedown',function(key) {
 
         offsettop = $(key.target).offset().top;
 
@@ -350,7 +350,7 @@ element.addEventListener('touchstart', event => {
 
 $( window ).load(function() {
 
-$(document).on("click touchstart","#modalclose",function(){
+$(document).on("mousedown","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
             $('#modal').fadeOut({queue : false,duration : 500});
             $('#modal').animate({top : offsettop + 600}, 500);
@@ -371,7 +371,7 @@ $(document).on("click touchstart","#modalclose",function(){
     });
 
   //  $("input[type=text]").mousedown(function(key) {
-    $("input[type=text]").on('click touchstart',function(key) {
+    $("input[type=text]").on('mousedown',function(key) {
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
