@@ -55,7 +55,7 @@ var ScrTop;
 $( window ).load(function() {
 
 $("input[type=text]").each(function(i,e){
-     $(".physickey").css("background","gray");
+     $(".physickey").css("background","green");
      e.readOnly = true;
 });
 
@@ -93,11 +93,11 @@ $("input[type=text]").each(function(i,e){
     $(".physickey").mouseup(function(key) {
          $("input[type=text]").each(function(i,e){
             if(e.readOnly == false){
-                $(".physickey").css("background","gray");
+                $(".physickey").css("background","green");
                 e.readOnly = true;
             }else{
                 e.readOnly = false;
-                $(".physickey").css("background","green");
+                $(".physickey").css("background","gray");
             }
         });
     });
