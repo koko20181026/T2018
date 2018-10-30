@@ -58,17 +58,16 @@ $(document).ready(function() {
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
     
-     $(".physickey").mousedown(function(key) {
+    $(".physickey").mousedown(function(key) {
          $("input[type=text]").each(function(i,e){
-            if(e.readOnly === false){
-            
-            $(".physickey").css("background","gray");
+            if(e.readOnly == false){
                 e.readOnly = true;
+                $(".physickey").css("background","green");
             }else{
                 e.readOnly = false;
-                $(".physickey").css("background","green");
+                $(".physickey").css("background","gray");
             }
-        });
+         });
     });
 });
 
