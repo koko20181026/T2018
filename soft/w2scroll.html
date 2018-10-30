@@ -6,6 +6,7 @@
   <meta author='' content=''>
   <meta keywords='' content=''>
   <meta description='' content=''>
+  <meta name="viewport" content="width=device-width,user-scalable=no">
   <title>白画面2(スクロール)</title>
   <link href="resources/css/common.css" rel="stylesheet" type="text/css" media="all" />
   <link rel="stylesheet" href="resources2demo/css/jquery.keypad.css" />
@@ -33,7 +34,7 @@
         display: none;
         position: absolute;
         top:0;
-        width: 100%; height: 100%; 
+        width: 980px;
         background: rgba(250,250,250,0.85);
         z-index: 100;
         padding: 10px;
@@ -46,21 +47,17 @@
           position: absolute;
           left:950px;
     }
-    body{
-        -webkit-text-size-adjust: 100%;
-    }
-    
 </style>
 <script>
-    var offsettop;
-    var ScrTop;
+var offsettop;
+var ScrTop;
 $( window ).load(function() {
-
-    $("input[type=text]").mouseup(function(key) {
-
-$("input[type=text]").each(function(i,e){
-     e.readOnly = true;
-});
+    $("input[type=text]").each(function(i,e){
+         e.readOnly = true;
+        $(".physickey").css("background","green");
+    });
+  
+   $(document).on("click","input[type=text]",function(key){
 
         offsettop = $(key.target).offset().top;
 
@@ -90,18 +87,17 @@ $("input[type=text]").each(function(i,e){
         });
     });
     
-$(".physickey").mouseup(function(key) {
-$("input[type=text]").each(function(i,e){
-if(e.readOnly === false){
-
-$(".physickey").css("background","green");
-e.readOnly = true;
-}else{
-e.readOnly = false;
-$(".physickey").css("background","gray");
-}
-});
-});
+    $(".physickey").mousedown(function(key) {
+         $("input[type=text]").each(function(i,e){
+            if(e.readOnly == false){
+                $(".physickey").css("background","green");
+                e.readOnly = true;
+            }else{
+                e.readOnly = false;
+                $(".physickey").css("background","gray");
+            }
+        });
+    });
     
 });
 </script>
@@ -352,7 +348,7 @@ $(".physickey").css("background","gray");
 
 $( window ).load(function() {
 
-    $(document).on("touchstart click ","#modalclose",function(){
+    $(document).on("click touchstart","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
             $('#modal').fadeOut({queue : false,duration : 300});
             $('#modal').animate({top : offsettop + 600}, 300);
@@ -362,7 +358,7 @@ $( window ).load(function() {
         }
     });
 
-    $("input").keydown(function(key) {
+    $("input[type=text]").keydown(function(key) {
         if (key.keyCode == 13 && ($("#modal").css("display") != "none")) {
                 $('#modal').fadeOut({queue : false,duration : 300});
                 $('#modal').animate({top : offsettop + 600}, 300);
@@ -372,8 +368,8 @@ $( window ).load(function() {
         }
     });
 
-//    $("input[type=text]").on("touchstart click ",(function(key) {
-    $("input[type=text]").mouseup(function(key) {
+  //  $("input[type=text]").mousedown(function(key) {
+  $(document).on("click","input[type=text]",function(key){
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
 
