@@ -57,6 +57,19 @@ $(document).ready(function() {
     $("input[type=text]").mouseup(function(key) {
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
     });
+    
+     $(".physickey").mousedown(function(key) {
+         $("input[type=text]").each(function(i,e){
+            if(e.readOnly === false){
+            
+            $(".physickey").css("background","gray");
+                e.readOnly = true;
+            }else{
+                e.readOnly = false;
+                $(".physickey").css("background","green");
+            }
+        });
+    });
 });
 
 function keypad_OnKeypress() {
