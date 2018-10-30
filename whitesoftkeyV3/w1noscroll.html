@@ -31,12 +31,28 @@
       input[type="text"] {
          margin: 10px;
       }
+
+    .physickey{
+         background:green;
+         height:50px;
+         font-size: 25px;
+         border-radius: 10px;
+         position: absolute;
+          left:550px;
+    }
   </style>
+  <script>
+  $( window ).load(function() {
+      $("input[type=text]").each(function(i,e){
+         e.readOnly = true;
+      });
+  });
+  </script>
 </head>
 <body>
   <div id="wrapper">
-    <div id="pageTitileName">
-     画面1(スクロール無)
+     <div id="pageTitileName">
+     画面1(スクロール無)<input type="button" class="physickey" value="物理キーボード">
     </div>
     <div id="mainContents">
       <div id="search-items">
