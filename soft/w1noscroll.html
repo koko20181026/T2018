@@ -352,20 +352,20 @@ $( window ).load(function() {
 
 $(document).on("click touchstart","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
-            $('#modal').fadeOut({queue : false,duration : 500});
-            $('#modal').animate({top : offsettop + 600}, 500);
+            $('#modal').fadeOut({queue : false,duration : 300});
+            $('#modal').animate({top : offsettop + 600}, 300);
 
-            $('html, body').animate({scrollTop : ScrTop}, 500);
+            $('html, body').animate({scrollTop : ScrTop}, 300);
             $("#dummyT").empty();
         }
     });
 
     $("input[type=text]").keydown(function(key) {
         if (key.keyCode == 13 && ($("#modal").css("display") != "none")) {
-                $('#modal').fadeOut({queue : false,duration : 500});
-                $('#modal').animate({top : offsettop + 600}, 500);
+                $('#modal').fadeOut({queue : false,duration : 300});
+                $('#modal').animate({top : offsettop + 600}, 300);
 
-                $('html, body').animate({scrollTop : ScrTop}, 500);
+                $('html, body').animate({scrollTop : ScrTop}, 300);
                 $("#dummyT").empty();
         }
     });
