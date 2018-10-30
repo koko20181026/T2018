@@ -609,14 +609,14 @@
                          var h = this._keyDownClass
                                    + (b.options.useThemeRoller ? ' ui-state-active'
                                              : '');
-                    //     c.find('button').mousedown(function() {
-                         c.find('button').on('click',function() {
+                         c.find('button').mousedown(function() {
+
                               $(this).addClass(h)
-                   //      }).mouseup(function() {
-                         }).on('click',function() {
+                         }).mouseup(function() {
+
                               $(this).removeClass(h)
-//                         }).mouseout(function() {
-                         }).on('click',function() {
+                         }).mouseout(function() {
+
                               $(this).removeClass(h)
                          }).filter('.' + this._keyClass).click(function() {
                               m._selectValue(g, $(this).text())
