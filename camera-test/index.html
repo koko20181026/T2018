@@ -115,13 +115,15 @@
 	    
 	    function successCallback(stream) {
 	    	player.srcObject = stream;
+		alert("1");
 	    };
 	    
 	    function errorCallback(err) {
 	    	alert(err);
 	    };
-	    
+	    alert("2");
 	    navigator.getUserMedia(medias, successCallback, errorCallback);
+	    alert("3");
 	  </script>
 	</body>
 </html>
