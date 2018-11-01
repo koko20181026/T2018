@@ -106,7 +106,7 @@
 	    	
 	    	var context = snapshot.getContext('2d');
 	    	
-	    	context.drawImage(player, 0, 0, snapshotCanvas.width, snapshotCanvas.height);
+	    	//context.drawImage(player, 0, 0, snapshotCanvas.width, snapshotCanvas.height);
 	    	
 		// Imagebase64Encode
 	    	img.src = snapshotCanvas.toDataURL('image/png');
@@ -115,15 +115,12 @@
 	    
 	    function successCallback(stream) {
 	    	player.srcObject = stream;
-		alert("1");
 	    };
 	    
 	    function errorCallback(err) {
 	    	alert(err);
 	    };
-	    alert("2");
 	    navigator.getUserMedia(medias, successCallback, errorCallback);
-	    alert("3");
 	  </script>
 	</body>
 </html>
