@@ -59,32 +59,32 @@
          e.readOnly = true;
       });
       
-      $(".mode1").click(function(){
+$(document).on("click",".mode1",function(){
             $("#modal").remove();
             $("#acTelKeypad_clerk").remove();
             $("#acTelKeypad_clerk2").remove();
         var divModal = $("<div></div>");
         divModal.attr("id","modal");
         $("body").append(divModal);
-         $( window ).load(function() {});
+
       });
-      $(".mode2").click(function(){
+$(document).on("click",".mode2",function(){
             $("#modal").remove();
             $("#acTelKeypad_clerk").remove();
             $("#acTelKeypad_clerk2").remove();
         var divModal = $("<div></div>");
         divModal.attr("id","acTelKeypad_clerk");
         $("body").append(divModal);
-         $( window ).load(function() {});
+
       });
-      $(".mode3").click(function(){
+$(document).on("click",".mode3",function(){
             $("#modal").remove();
             $("#acTelKeypad_clerk").remove();
             $("#acTelKeypad_clerk2").remove();
         var divModal = $("<div></div>");
         divModal.attr("id","acTelKeypad_clerk2");
         $("body").append(divModal);
-         $( window ).load(function() {});
+
       });
   });
   </script>
