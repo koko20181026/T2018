@@ -25,10 +25,10 @@ $(document).ready(function() {
             target : $(key.target),
             clearText : '全削除',
             backText : '1文字削除',
-            spacebarText : 'ｽﾍﾟｰｽ',
-            switchText : '英数字選択',
-            layout : kanaLayout02,
-            switchLayout : qwertyLayout02,
+            //spacebarText : 'ｽﾍﾟｰｽ',
+            //switchText : '英数字選択',
+            layout : cypherLayout,,
+            //switchLayout : qwertyLayout02,
             onKeypress : keypad_OnKeypress,
             keypadOnly : false
         });
