@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     
     $("input[type=text]").mouseup(function(key) {
-alert("ddd");
+
         offsettop = $(key.target).offset().top;
 
         $('html, body').animate({scrollTop : offsettop}, 400);
