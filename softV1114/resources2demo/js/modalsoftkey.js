@@ -2,7 +2,7 @@ $(document).ready(function() {
     var offsettop;
     var ScrTop;
     
-    $("#modal").load("modal.html");
+
     
     $("input[type=text]").mouseup(function(key) {
 alert("ddd");
