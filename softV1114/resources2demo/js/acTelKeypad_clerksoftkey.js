@@ -27,7 +27,7 @@ $(document).ready(function() {
             backText : '1文字削除',
             //spacebarText : 'ｽﾍﾟｰｽ',
             //switchText : '英数字選択',
-            layout : cypherLayout,,
+            layout : cypherLayout,
             //switchLayout : qwertyLayout02,
             onKeypress : keypad_OnKeypress,
             keypadOnly : false
@@ -55,7 +55,7 @@ $(document).ready(function() {
     });
 
     $("input[type=text]").mouseup(function(key) {
-        $("#nameKeypad1").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+        $("#nameKeypad1").keypad("option", {layout: cypherLayout, target:$(key.target)});
     });
     
     $(".physickey").mousedown(function(key) {
