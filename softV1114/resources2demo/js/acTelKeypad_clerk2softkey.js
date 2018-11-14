@@ -2,7 +2,7 @@ $(document).ready(function() {
     var offsettop;
     var ScrTop;
     
-    $("#acTelKeypad_clerk2").load("acTelKeypad_clerk2.html");
+
     
     $("input[type=text]").mouseup(function(key) {
 
