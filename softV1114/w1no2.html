@@ -60,31 +60,36 @@
       });
       
 $(document).on("click",".mode1",function(){
-            $("#modal").remove();
-            $("#acTelKeypad_clerk").remove();
-            $("#acTelKeypad_clerk2").remove();
+        $("#modal").remove();
+        $("#acTelKeypad_clerk").remove();
+        $("#acTelKeypad_clerk2").remove();
+  
         var divModal = $("<div></div>");
         divModal.attr("id","modal");
         $("body").append(divModal);
-
+        
+        $("#modal").load("modal.html");
       });
 $(document).on("click",".mode2",function(){
-            $("#modal").remove();
-            $("#acTelKeypad_clerk").remove();
-            $("#acTelKeypad_clerk2").remove();
+        $("#modal").remove();
+        $("#acTelKeypad_clerk").remove();
+        $("#acTelKeypad_clerk2").remove();
+  
         var divModal = $("<div></div>");
         divModal.attr("id","acTelKeypad_clerk");
         $("body").append(divModal);
 
+        $("#acTelKeypad_clerk").load("acTelKeypad_clerk.html");  
       });
 $(document).on("click",".mode3",function(){
-            $("#modal").remove();
-            $("#acTelKeypad_clerk").remove();
-            $("#acTelKeypad_clerk2").remove();
+        $("#modal").remove();
+        $("#acTelKeypad_clerk").remove();
+        $("#acTelKeypad_clerk2").remove();
         var divModal = $("<div></div>");
         divModal.attr("id","acTelKeypad_clerk2");
         $("body").append(divModal);
-
+  
+        $("#acTelKeypad_clerk2").load("acTelKeypad_clerk2.html");
       });
   });
   </script>
