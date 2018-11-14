@@ -1,7 +1,8 @@
 $(document).ready(function() {
     var offsettop;
     var ScrTop;
-    
+    var cypherLayout = [ '123' + $.keypad.SPACE, '456' + $.keypad.SPACE,
+        '789' + $.keypad.CLEAR, '0' + $.keypad.BACK ];
 
     
     $("input[type=text]").mouseup(function(key) {
