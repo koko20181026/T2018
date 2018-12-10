@@ -3,7 +3,7 @@ $(document).ready(function() {
 	alert("更新");
 $(".test").click(function(){
   alert("更新");
-});
+}); 
 	$("form").submit(checkDoubleSubmit);
 
 	$(document).keydown(disableBackspaceKey);
