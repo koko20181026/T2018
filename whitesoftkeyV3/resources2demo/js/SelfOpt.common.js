@@ -1,9 +1,7 @@
 $(document).ready(function() {
 	preventZoom();
 	alert("更新");
-$(".test").click(function(){
-  alert("更新");
-}); 
+
 	$("form").submit(checkDoubleSubmit);
 
 	$(document).keydown(disableBackspaceKey);
@@ -15,6 +13,10 @@ $(".test").click(function(){
 	$('#help').click(function(){
 		window.location.href = './ヘルプ画面.html';
 	});
+	
+	$('#test').click(function(){
+  alert('更新');
+}); 
 
 	//戻る
 	$('.back').click(function() {
