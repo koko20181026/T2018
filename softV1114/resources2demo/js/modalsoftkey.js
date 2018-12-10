@@ -2,7 +2,7 @@ $(document).ready(function() {
     var offsettop;
     var ScrTop;
     
-
+alert("dddd");
     
     $("input[type=text]").mouseup(function(key) {
 
