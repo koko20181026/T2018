@@ -47,7 +47,16 @@
       $("input[type=text]").each(function(i,e){
          e.readOnly = true;
       });
+  
+  
+  np = navigator.platform;
+if (nP == "iPad" || nP == "iPhone" || nP == "iPod" || nP == "iPhone Simulator" || nP == "iPad Simulator"){
+  $('select option[readonly]').remove();
+}
+  
+  
   });
+    
   </script>
 </head>
 <body>
