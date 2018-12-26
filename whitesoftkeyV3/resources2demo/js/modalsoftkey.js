@@ -44,7 +44,7 @@ $(document).ready(function() {
     $('input[type=text]').blur(function(){
 
     	$('input[type=text]').attr('readonly',true);
-        $(this).css("background-color","white");
+//         $(this).css("background-color","white");
     });
 
     $(document).on("click touchstart","#modalclose",function(){
