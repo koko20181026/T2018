@@ -56,7 +56,7 @@ $(document).ready(function() {
 
 //     	$('input[type=text]').attr('readonly',true);
 //         $(this).css("background-color","white");
-//     });
+});
 
     $(document).on("click touchstart","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
@@ -96,10 +96,10 @@ $(document).ready(function() {
 });
 
 function keypad_OnKeypress(key, value, inst) {
-    $('input[type=text]').attr('readonly',true);
+//     $('input[type=text]').attr('readonly',true);
     inst._input.focus();
-        setTimeout(function(){
-            $('input[type=text]').attr('readonly',false);
-        },15);
+//         setTimeout(function(){
+//             $('input[type=text]').attr('readonly',false);
+//         },15);
 //   $("#nameKeypad").keypad("option", "target").focus();
 }
