@@ -10,11 +10,7 @@ $(document).ready(function() {
        
        if(modalFlg != key.target.id && $("#modal").css("display") == "none"){
             modalFlg = key.target.id;
-            $(this).css("background-color","red");
-            setTimeout(function(){
-                $('input[type=text]').attr('readonly',false);
-            },20);
-                
+
             offsettop = $(key.target).offset().top;
             $('html, body').animate({scrollTop : offsettop}, 400);
             if ($("#modal").css("display") == "none") {
@@ -40,14 +36,22 @@ $(document).ready(function() {
                 onKeypress : keypad_OnKeypress,
                 keypadOnly : false
             });
+           
+            $(this).css("background-color","red");
+            setTimeout(function(){
+                $('input[type=text]').attr('readonly',false);
+            },20);
+                
        }else if(modalFlg != key.target.id && $("#modal").css("display") != "none"){
             modalFlg = key.target.id;
+            $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+           
             $(this).css("background-color","red");
             setTimeout(function(){
                 $('input[type=text]').attr('readonly',false);
             },20);
            
-           $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+
        }
        
   });
