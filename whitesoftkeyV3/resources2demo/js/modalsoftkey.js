@@ -10,7 +10,7 @@ $(document).ready(function() {
 //        $(this).css("background-color","red");
        setTimeout(function(){
             $('input[type=text]').attr('readonly',false);
-        },20);
+        },15);
         
         
         offsettop = $(key.target).offset().top;
@@ -84,6 +84,7 @@ $(document).ready(function() {
     });
 });
 
-function keypad_OnKeypress() {
-  $("#nameKeypad").keypad("option", "target").focus();
+function keypad_OnKeypress(inst) {
+    inst._input.focus();
+//   $("#nameKeypad").keypad("option", "target").focus();
 }
