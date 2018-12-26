@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    var agt = navigator.userAgent.toLowerCase();
+    var agt = navigator.userAgent;
     alert(agt);
 //     if (agt.indexOf("chrome") != -1) return 'Chrome'; 
 //     if (agt.indexOf("opera") != -1) return 'Opera'; 
