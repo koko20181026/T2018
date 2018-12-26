@@ -29,20 +29,28 @@ $(document).ready(function() {
            
             $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
 
-                $("#nameKeypad").keypad({
-                    target : $(key.target),
-                    clearText : '全削除',
-                    backText : '1文字削除',
-                    spacebarText : 'ｽﾍﾟｰｽ',
-                    switchText : '英数字選択',
-                    layout : kanaLayout02,
-                    switchLayout : qwertyLayout02,
-                    onKeypress : keypad_OnKeypress,
-                    keypadOnly : false
-                });
-           }
+            $("#nameKeypad").keypad({
+                target : $(key.target),
+                clearText : '全削除',
+                backText : '1文字削除',
+                spacebarText : 'ｽﾍﾟｰｽ',
+                switchText : '英数字選択',
+                layout : kanaLayout02,
+                switchLayout : qwertyLayout02,
+                onKeypress : keypad_OnKeypress,
+                keypadOnly : false
+            });
+       }else if(modalFlg != key.target.id && $("#modal").css("display") != "none"){
+            modalFlg = key.target.id;
+            $(this).css("background-color","red");
+            setTimeout(function(){
+                $('input[type=text]').attr('readonly',false);
+            },20);
+           
+           $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+       }
        
-    });
+  });
     
 //     $('input[type=text]').blur(function(){
 
