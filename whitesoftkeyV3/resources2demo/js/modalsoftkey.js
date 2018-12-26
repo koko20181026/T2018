@@ -84,7 +84,7 @@ $(document).ready(function() {
     });
 });
 
-function keypad_OnKeypress(inst) {
+function keypad_OnKeypress(key, value, inst) {
     inst._input.focus();
 //   $("#nameKeypad").keypad("option", "target").focus();
 }
