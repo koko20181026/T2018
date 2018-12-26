@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	//preventZoom();
-	alert("更新");
 
 	//$("form").submit(checkDoubleSubmit);
 
