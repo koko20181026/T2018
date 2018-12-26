@@ -26,7 +26,7 @@ $(document).ready(function() {
             $("#dummyT").append(dummyT);
         }
         
-        $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+//         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
         
         $("#nameKeypad").keypad({
             target : $(key.target),
@@ -67,9 +67,9 @@ $(document).ready(function() {
         }
     });
 
-//     $("input[type=text]").mouseup(function(key) {
-//         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
-//     });
+    $("input[type=text]").mouseup(function(key) {
+        $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+    });
     
     $(".physickey").mousedown(function(key) {
          $("input[type=text]").each(function(i,e){
