@@ -10,9 +10,8 @@ $(document).ready(function() {
        $(this).css("background-color","red");
        setTimeout(function(){
             $('input[type=text]').attr('readonly',false);
-        },15);
-        
-        
+        },20);
+                
         offsettop = $(key.target).offset().top;
         $('html, body').animate({scrollTop : offsettop}, 400);
         if ($("#modal").css("display") == "none") {
@@ -85,6 +84,10 @@ $(document).ready(function() {
 });
 
 function keypad_OnKeypress(key, value, inst) {
+    $('input[type=text]').attr('readonly',true);
     inst._input.focus();
+        setTimeout(function(){
+            $('input[type=text]').attr('readonly',false);
+        },15);
 //   $("#nameKeypad").keypad("option", "target").focus();
 }
