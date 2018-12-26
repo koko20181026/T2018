@@ -7,7 +7,7 @@ $(document).ready(function() {
    $("input[type=text]").focus(function(key){
 //      $(document).on("click touchstart","input[type=text]",function(key){
 //     $("input[type=text]").mouseup(function(key) {
-       $(this).css("background-color","red");
+//        $(this).css("background-color","red");
        setTimeout(function(){
             $('input[type=text]').attr('readonly',false);
         },20);
