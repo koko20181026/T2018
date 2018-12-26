@@ -95,10 +95,10 @@ $(document).ready(function() {
 });
 
 function keypad_OnKeypress(key, value, inst) {
-//     $('input[type=text]').attr('readonly',true);
+    $('input[type=text]').attr('readonly',true);
     inst._input.focus();
-//         setTimeout(function(){
-//             $('input[type=text]').attr('readonly',false);
-//         },15);
+        setTimeout(function(){
+            $('input[type=text]').attr('readonly',false);
+        },15);
 //   $("#nameKeypad").keypad("option", "target").focus();
 }
