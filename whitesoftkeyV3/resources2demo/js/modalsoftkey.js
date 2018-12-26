@@ -4,13 +4,17 @@ $(document).ready(function() {
     
     $("#modal").load("modal.html");
     
-    $(document).on("click touchstart","input[type=text]",function(key){
+    $("input[type=text]").focus(function(key){
+//     $(document).on("click touchstart","input[type=text]",function(key){
 //     $("input[type=text]").mouseup(function(key) {
+       $(this).css("background-color","red");
+       setTimeout(function(){
+            $('input[type=text]').attr('readonly',false);
+        },20);
+        
         
         offsettop = $(key.target).offset().top;
-
         $('html, body').animate({scrollTop : offsettop}, 400);
-
         if ($("#modal").css("display") == "none") {
             $('#modal').css("top", offsettop + 1000);
             $('#modal').fadeIn({queue : false,duration : 500});
@@ -21,6 +25,8 @@ $(document).ready(function() {
             var dummyT = $("<table></table>").css("border","0").css("height",modalHeight);
             $("#dummyT").append(dummyT);
         }
+        
+        $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
         
         $("#nameKeypad").keypad({
             target : $(key.target),
@@ -33,11 +39,6 @@ $(document).ready(function() {
             onKeypress : "",
             keypadOnly : false
         });
-        
-        $(this).css("background-color","red");
-        setTimeout(function(){
-            $('input[type=text]').attr('readonly',false);
-        },20);
     });
     
     $('input[type=text]').blur(function(){
@@ -66,9 +67,9 @@ $(document).ready(function() {
         }
     });
 
-    $("input[type=text]").mouseup(function(key) {
-        $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
-    });
+//     $("input[type=text]").mouseup(function(key) {
+//         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+//     });
     
     $(".physickey").mousedown(function(key) {
          $("input[type=text]").each(function(i,e){
