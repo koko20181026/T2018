@@ -8,8 +8,8 @@ $(document).ready(function() {
 //      $(document).on("click touchstart","input[type=text]",function(key){
 //     $("input[type=text]").mouseup(function(key) {
        
-       if(modalFlg != key.target && $("#modal").css("display") == "none"){
-            modalFlg = key.target;
+       if(modalFlg != key.target.id && $("#modal").css("display") == "none"){
+            modalFlg = key.target.id;
             $(this).css("background-color","red");
             setTimeout(function(){
                 $('input[type=text]').attr('readonly',false);
