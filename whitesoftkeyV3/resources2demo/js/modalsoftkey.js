@@ -39,6 +39,7 @@ $(document).ready(function() {
     });
     
     $('input[type=text]').blur(function(){
+        alert("1");
     	$('input[type=text]').attr('readonly',true);
     });
 
