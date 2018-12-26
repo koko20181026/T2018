@@ -7,7 +7,7 @@ $(document).ready(function() {
     $(document).on("click touchstart","input[type=text]",function(key){
 //     $("input[type=text]").mouseup(function(key) {
         setTimeout(function(){
-            $('input').attr('readonly',false);
+            $('input[type=text]').attr('readonly',false);
         },20);
         
         offsettop = $(key.target).offset().top;
