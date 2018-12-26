@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Touch Tracker Marker</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+<style type="text/css">
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#banner-message {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  transition: all 0.2s;
+  margin: 0 auto;
+  width: 300px;
+}
+
+button {
+  background: #0084ff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  font-size: 15px;
+  color: #fff;
+}
+
+#banner-message.alt {
+  background: #0084ff;
+  color: #fff;
+  margin-top: 40px;
+  width: 200px;
+}
+
+#banner-message.alt button {
+  background: #fff;
+  color: #000;
+}
+</style>
+
+<script type="text/javascript">
+//1.document.rdy で画面input 属性をすべて readOnlyにする
+  //2. focusのセットタイムアウト20で該当read only を解除する
+  //
+  $('#dummyText').attr('readonly',true);
+  
+  $(function(){
+    $('input').focus(function(){
+			$(this).css("background-color","red");
+			setTimeout(function(){
+        $('input').attr('readonly',false);
+      },20);
+    });
+    
+    $('input').blur(function(){
+    	$('input').attr('readonly',true);
+    });
+
+		$("#putButton").click(function(){
+    	var getData = $('#dummyText').val();
+    	$('#dummyText').val(getData +"aaaaa");
+    });
+
+  });
+
+</script>
+</head>
+<body>
+	<div>
+    target:<input type = "text" id="dummyText">
+
+    <button id = "putButton">値入力ボタン</button>  
+    
+</div>
+
+
+</body>
+</html>
