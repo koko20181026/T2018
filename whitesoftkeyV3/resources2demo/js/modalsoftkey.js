@@ -26,7 +26,7 @@ $(document).ready(function() {
             $("#dummyT").append(dummyT);
         }
         
-//         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
         
         $("#nameKeypad").keypad({
             target : $(key.target),
