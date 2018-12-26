@@ -40,7 +40,7 @@ $(document).ready(function() {
         });
        
 //            $('input[type=text]').attr('readonly',true);
-           inst._input.focus();
+           $(key.target).focus();
            $('input[type=text]').attr('readonly',false);
        
        
