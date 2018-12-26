@@ -4,8 +4,12 @@ $(document).ready(function() {
     
     $("#modal").load("modal.html");
     
-    $("input[type=text]").mouseup(function(key) {
-
+    $(document).on("click touchstart","input[type=text]",function(key){
+//     $("input[type=text]").mouseup(function(key) {
+        setTimeout(function(){
+            $('input').attr('readonly',false);
+        },20);
+        
         offsettop = $(key.target).offset().top;
 
         $('html, body').animate({scrollTop : offsettop}, 400);
@@ -33,6 +37,10 @@ $(document).ready(function() {
             keypadOnly : false
         });
     });
+    
+    $('input[type=text]').blur(function(){
+    	$('input[type=text]').attr('readonly',true);
+    });
 
     $(document).on("click touchstart","#modalclose",function(){
         if ($("#modal").css("display") != "none") {
@@ -44,7 +52,7 @@ $(document).ready(function() {
         }
     });
 
-    $("input").keydown(function(key) {
+    $("input[type=text]").keydown(function(key) {
         if (key.keyCode == 13 && ($("#modal").css("display") != "none")) {
                 $('#modal').fadeOut({queue : false,duration : 500});
                 $('#modal').animate({top : offsettop + 600}, 500);
