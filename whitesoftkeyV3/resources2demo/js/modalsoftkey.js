@@ -38,10 +38,15 @@ $(document).ready(function() {
             onKeypress : keypad_OnKeypress,
             keypadOnly : false
         });
+       
+//            $('input[type=text]').attr('readonly',true);
+           inst._input.focus();
+           $('input[type=text]').attr('readonly',false);
+       
+       
     });
     
     $('input[type=text]').blur(function(){
-
     	$('input[type=text]').attr('readonly',true);
         $(this).css("background-color","white");
     });
@@ -86,8 +91,6 @@ $(document).ready(function() {
 function keypad_OnKeypress(key, value, inst) {
     $('input[type=text]').attr('readonly',true);
     inst._input.focus();
-//         setTimeout(function(){
-            $('input[type=text]').attr('readonly',false);
-//         },15);
+    $('input[type=text]').attr('readonly',false);
 //   $("#nameKeypad").keypad("option", "target").focus();
 }
