@@ -30,7 +30,7 @@ $(document).ready(function() {
             switchText : '英数字選択',
             layout : kanaLayout02,
             switchLayout : qwertyLayout02,
-            onKeypress : keypad_OnKeypress,
+            onKeypress : "",
             keypadOnly : false
         });
         
@@ -83,6 +83,6 @@ $(document).ready(function() {
     });
 });
 
-function keypad_OnKeypress() {
-  $("#nameKeypad").keypad("option", "target").focus();
-}
+// function keypad_OnKeypress() {
+//   $("#nameKeypad").keypad("option", "target").focus();
+// }
