@@ -543,6 +543,11 @@ function moveCursor(key, value, inst) {
 	//　フォカス変わった時変わった位置を反映
 //	cursorIndex = inst._input[0].selectionStart;
 	
+	$('input[type=text]').attr('readonly',true);
+    inst._input.focus();
+    $('input[type=text]').attr('readonly',false);
+	
+	
 	var val = inst._input.val();
 	var maxlength = inst._input.attr('maxlength');
 	var valLength = val.length; // 押下したキーを含んだ長さ
