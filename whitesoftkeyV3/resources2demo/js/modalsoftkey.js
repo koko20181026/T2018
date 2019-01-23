@@ -91,6 +91,9 @@ $(document).ready(function() {
 
     $("input[type=text]").mouseup(function(key) {
         $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
+	    	          $('#'+key.target.id).trigger(
+    	            jQuery.Event( 'keypress', { keyCode:35} )
+      	          );
     });
 	
 // 20190123
@@ -99,9 +102,7 @@ $(document).ready(function() {
 // 		$("#"+ key.target.id).get(0).setSelectionRange(cursorIndex, cursorIndex);
 // 	 });
 	
-	          $('#'+key.target.id).trigger(
-    	            jQuery.Event( 'keypress', { keyCode:35} )
-      	          );
+
     
     $(".physickey").mousedown(function(key) {
          $("input[type=text]").each(function(i,e){
