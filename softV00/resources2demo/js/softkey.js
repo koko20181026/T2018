@@ -322,10 +322,10 @@ function softKey(layoutName, targetId, cssClass){
 //	 });
     
 //    聞くように見えるがクリックイベント発生しない
-// 	 $("input[type=text]").click(function(key){
-// 		 cursorIndex = key.target.selectionStart;
+	 $("input[type=text]").click(function(key){
+		 cursorIndex = key.target.selectionStart;
 // 		 $("#testC").val(cursorIndex);
-// 	 });
+	 });
     
     // password ↓
     $("input[type=password]").mouseup(function(key) {
