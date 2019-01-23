@@ -85,6 +85,17 @@ function noRightClick(event) {
 	}
 }
 
+
+function lbm_Util_ItemIsNull(p_Item) {
+    if(p_Item == null || p_Item == "" || p_Item == undefined)
+    {
+        return true;
+    }
+
+    return false;
+}
+
+
 // IE5+ 対応
 document.oncontextmenu = noContextMenu;
 // ほかのブラウザ対応
