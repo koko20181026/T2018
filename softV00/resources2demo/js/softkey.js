@@ -305,10 +305,7 @@ function softKey(layoutName, targetId, cssClass){
             changeTarget(key.target);
         }
         
-        setTimeout(function(){
-            $('input[type=text]').attr('readonly',false);
-        },20);
-        
+        $('input[type=text]').attr('readonly',false);
         // キーボードのケースを追加する部分↑↑↑↑↑
            // イベントによるキーボード変更↑↑↑↑↑
     });
@@ -325,10 +322,10 @@ function softKey(layoutName, targetId, cssClass){
 //	 });
     
 //    聞くように見えるがクリックイベント発生しない
-	 $("input[type=text]").click(function(key){
-		 cursorIndex = key.target.selectionStart;
-		 $("#testC").val(cursorIndex);
-	 });
+// 	 $("input[type=text]").click(function(key){
+// 		 cursorIndex = key.target.selectionStart;
+// 		 $("#testC").val(cursorIndex);
+// 	 });
     
     // password ↓
     $("input[type=password]").mouseup(function(key) {
