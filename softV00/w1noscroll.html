@@ -53,53 +53,7 @@ var offsettop;
 var ScrTop;
 $( window ).load(function() {
 
-        $("input[type=text]").each(function(i,e){
-             e.readOnly = true;
-        });
-
- //    $("input[type=text]").mousedown(function(key) {
-
-       $(document).on("click","input[type=text]",function(key){
-
-        offsettop = $(key.target).offset().top;
-        $('html, body').animate({scrollTop : offsettop}, 400);
-
-        if ($("#modal").css("display") == "none") {
-            $('#modal').css("top", offsettop + 1000);
-            $('#modal').fadeIn({queue : false,duration : 300});
-            $('#modal').animate({top : offsettop + 50}, 300);
-
-            var modalHeight = $("#modal").height();
-            ScrTop = $(document).scrollTop();            
-            var dummyT = $("<table></table>").css("border","0").css("height",modalHeight);
-            $("#dummyT").append(dummyT);
-        }
-
-        $("#nameKeypad").keypad({
-            target : $(key.target),
-            clearText : '全削除',
-            backText : '1文字削除',
-            spacebarText : 'ｽﾍﾟｰｽ',
-            switchText : '英数字選択',
-            layout : kanaLayout02,
-            switchLayout : qwertyLayout02,
-            onKeypress : keypad_OnKeypress,
-            keypadOnly : false
-        });
-    });
-
-    $(".physickey").mousedown(function(key) {
-         $("input[type=text]").each(function(i,e){
-            if(e.readOnly === false){
-            
-            $(".physickey").css("background","gray");
-                e.readOnly = true;
-            }else{
-                e.readOnly = false;
-                $(".physickey").css("background","green");
-            }
-        });
-    });
+        softKey("kanaNameLayout", "kanaNameLayout01", "");
 });
 </script>
 </head>
@@ -111,11 +65,11 @@ $( window ).load(function() {
     </div>
     <div id="mainContents">
       <div id="search-items">
-        <span>項目１：</span><input type="text" style="width:200px;" value="" id="dummy1" maxlength="28">
-        <span>項目２：</span><input type="text" style="width:200px;" value="" id="dummy2" maxlength="28">
+        <span>項目１：</span><input type="text" style="width:200px;" value="" id="kanaNameLayout01" maxlength="28">
+        <span>項目２：</span><input type="text" style="width:200px;" value="" id="kanaNameLayout02" maxlength="28">
        <br />
-        <span>項目３：</span><input type="text" style="width:200px;" value="" id="dummy3" maxlength="28">
-        <span>項目４：</span><input type="text" style="width:200px;" value="" id="dummy4" maxlength="28">
+        <span>項目３：</span><input type="text" style="width:200px;" value="" id="kanaNameLayout03" maxlength="28">
+        <span>項目４：</span><input type="text" style="width:200px;" value="" id="kanaNameLayout04" maxlength="28">
        <br />
         <span>項目５：</span>
         <select name="year" class="year">
