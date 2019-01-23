@@ -231,9 +231,7 @@ function softKey(layoutName, targetId, cssClass){
 //    cursorIndex = $("#"+targetId).val().length;
     setOldTargetId(targetId);
     $("#"+targetId).focus();
-    setTimeout(function(){
-        $('input[type=text]').attr('readonly',false);
-    },20);
+
     
     dakutenKeyControl();
     
@@ -241,7 +239,9 @@ function softKey(layoutName, targetId, cssClass){
     // 最初キーボード設定↑↑↑↑↑
     // イベントによるキーボードＴａｒｇｅｔ変更↓↓↓↓↓
       $("input[type=text]").focus(function(key){
-    	  
+   setTimeout(function(){
+        $('input[type=text]').attr('readonly',false);
+    },20);
 //          $('#kanaAddrLayout').trigger(
 //      	        jQuery.Event( 'keypress', { keyCode:35} )
 //      	    );
