@@ -94,10 +94,14 @@ $(document).ready(function() {
     });
 	
 // 20190123
-	 $("input[type=text]").click(function(key){
-		 var cursorIndex = key.target.selectionStart;
-		$("#"+ key.target.id).get(0).setSelectionRange(cursorIndex, cursorIndex);
-	 });
+// 	 $("input[type=text]").click(function(key){
+// 		 var cursorIndex = key.target.selectionStart;
+// 		$("#"+ key.target.id).get(0).setSelectionRange(cursorIndex, cursorIndex);
+// 	 });
+	
+	          $('#'+key.target.id).trigger(
+    	            jQuery.Event( 'keypress', { keyCode:35} )
+      	          );
     
     $(".physickey").mousedown(function(key) {
          $("input[type=text]").each(function(i,e){
