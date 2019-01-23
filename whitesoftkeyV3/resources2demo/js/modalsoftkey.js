@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 // 20190123
 	 $("input[type=text]").click(function(key){
-		 cursorIndex = key.target.selectionStart;
+		 var cursorIndex = key.target.selectionStart;
 		$("#"+ key.target.id).get(0).setSelectionRange(cursorIndex, cursorIndex);
 	 });
 
