@@ -237,107 +237,15 @@ $( window ).load(function() {
         <br /><br />
        <span>項目６：</span><input id="dummy6" type="text" style="width:700px;" value=""><br />
        <span>項目７：</span><input id="dummy7" type="text" style="width:700px;" value=""><br />
+         <div id="keypadArea" class="jqueryKeypad"></div>
       </div>
     </div>
-    <div id="keypadArea" class="jqueryKeypad"></div>
+   
   </div>
 
   <div id="dummyT"></div>
 
-  <!-- #contents START -->
-<!-- <div id="modal" >
-<style>
-article.indexArticle {
-  min-height: 800px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
 
-#inputArea {
-  position: relative;
-  left:25px;
-}
-
-article {
-  min-height: 800px;
-}
-
-article .input {
-  height: 600px;
-  width: 1366px;
-  position: absolute;
-  top: 290px;
-  left: 0px;
-}
-
-input[type="text"]:focus { background: #ffffcc;}
-
-input[type="radio"] {
-  height:30px;
-  width:30px;
-  margin:10px 10px 10px 10px;
-}
-
-#wrapperTest{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-#modalclose{
-    position: absolute;
-    top: 0;
-    left:950px;
-}
-</style>
-
-<script>
-
-$(window).load(function() {
-
-   $(document).on("click","#modalclose",function(){
-        if ($("#modal").css("display") != "none") {
-            $('#modal').fadeOut({queue : false,duration : 500});
-            $('#modal').animate({top : offsettop + 600}, 500);
-
-            $('html, body').animate({scrollTop : ScrTop}, 500);
-            $("#dummyT").empty();
-        }
-    });
-
-    $("input").keydown(function(key) {
-        if (key.keyCode == 13 && ($("#modal").css("display") != "none")) {
-                $('#modal').fadeOut({queue : false,duration : 500});
-                $('#modal').animate({top : offsettop + 600}, 500);
-
-                $('html, body').animate({scrollTop : ScrTop}, 500);
-                $("#dummyT").empty();
-        }
-    });
-
-//    $("input[type=text]").mousedown(function(key) {
-    $(document).on("click","input[type=text]",function(key){
-        $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
-    });
-
-});
-
-function keypad_OnKeypress() {
-    $("#nameKeypad").keypad("option", "target").focus();
-}
-</script>
-      <div id="wrapperTest">
-        <!-- メイン／フッター -->
-    <!--            <div style="display:block;height:90%;overflow-x:hidden;overflow-y:hidden;">-->    
-        <div style="display:block;height:90%;">
-            <div id="mainContents">
-            <div id="modalclose" style="height:20px;width:20px;color:black;font-size:20pt;"> X </div>
-                <article>
-                    <div id="nameKeypad" class="jqueryKeypad"></div>
-                </article>
-            </div>
-        </div>
-      </div>
-</div> -->
  
 <!--/#contents-->
 </body>
