@@ -106,6 +106,12 @@ $(document).ready(function() {
     });
 });
 
+// 20190123
+	 $("input[type=text]").click(function(key){
+		 cursorIndex = key.target.selectionStart;
+		$("#"+ key.target.id).get(0).setSelectionRange(cursorIndex, cursorIndex);
+	 });
+
 function keypad_OnKeypress(key, value, inst) {
     $('input[type=text]').attr('readonly',true);
     inst._input.focus();
