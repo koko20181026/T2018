@@ -5,7 +5,7 @@ function modalSoftKey(cssClass){
         e.readOnly = true;
      });
     
-    $("#modal").load("../disp/modal.html");
+    $("#modal").load("modal.html");
     
     $("input[type=text]").focus(function(key) {
     	
