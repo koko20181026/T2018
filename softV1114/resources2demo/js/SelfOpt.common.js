@@ -4,7 +4,7 @@ $(document).ready(function() {
 	//$("form").submit(checkDoubleSubmit);
 
 	//$(document).keydown(disableBackspaceKey);
-
+alert();
 	$('#topback').click(function(){
 		window.location.href = '../メニュー画面（共通メニュー）.html';
 	});
