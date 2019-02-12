@@ -1,9 +1,9 @@
 $(document).ready(function() {
-//	preventZoom();
+	//preventZoom();
 
-	$("form").submit(checkDoubleSubmit);
+	//$("form").submit(checkDoubleSubmit);
 
-	$(document).keydown(disableBackspaceKey);
+	//$(document).keydown(disableBackspaceKey);
 
 	$('#topback').click(function(){
 		window.location.href = '../メニュー画面（共通メニュー）.html';
@@ -12,6 +12,10 @@ $(document).ready(function() {
 	$('#help').click(function(){
 		window.location.href = './ヘルプ画面.html';
 	});
+	
+	$('#test').click(function(){
+  alert('更新');
+}); 
 
 	//戻る
 	$('.back').click(function() {
