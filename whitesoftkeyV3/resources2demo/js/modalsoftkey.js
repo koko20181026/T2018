@@ -31,7 +31,7 @@ $(document).ready(function() {
         },10);
         
         
-        if ($("#softKeyModal").css("display") == "none") {
+        if ($("#modal").css("display") == "none") {
         	offsettop = $(key.target).offset().top;
             $('html, body').animate({scrollTop : offsettop}, 400);
         	var windowHeight = $(window).height();
