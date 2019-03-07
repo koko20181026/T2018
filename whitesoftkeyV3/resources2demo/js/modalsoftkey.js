@@ -17,31 +17,35 @@ $(document).ready(function() {
 //     if (agt.indexOf("mozilla/5.0") != -1) return 'Mozilla';
     
     
-    
     var offsettop;
     var ScrTop;
+    $("input[type=text]").each(function(i,e){
+        e.readOnly = true;
+     });
     
     $("#modal").load("modal.html");
     
    $("input[type=text]").focus(function(key){
-//      $(document).on("click touchstart","input[type=text]",function(key){
-//     $("input[type=text]").mouseup(function(key) {
-       $(this).css("background-color","red");
-       setTimeout(function(){
+        setTimeout(function(){
             $('input[type=text]').attr('readonly',false);
-        },20);
-                
-        offsettop = $(key.target).offset().top;
-        $('html, body').animate({scrollTop : offsettop}, 400);
-        if ($("#modal").css("display") == "none") {
-            $('#modal').css("top", offsettop + 1000);
-            $('#modal').fadeIn({queue : false,duration : 500});
-            $('#modal').animate({top : offsettop + 50}, 500);
-
-            var modalHeight = $("#modal").height();
-            ScrTop = $(document).scrollTop();            
+        },10);
+        
+        
+        if ($("#softKeyModal").css("display") == "none") {
+        	offsettop = $(key.target).offset().top;
+            $('html, body').animate({scrollTop : offsettop}, 400);
+        	var windowHeight = $(window).height();
+            var modalHeight = 1398*1.3;
+            ScrTop = $(document).scrollTop();
+            var dummyTr = $('<tr><td> </td></tr>');
             var dummyT = $("<table></table>").css("border","0").css("height",modalHeight);
+            dummyT.append(dummyTr);
             $("#dummyT").append(dummyT);
+            $('#dummyT').css('min-height', windowHeight + modalHeight + 'px');
+
+            $('#softKeyModal').css("top", offsettop + 1398);
+            $('#softKeyModal').fadeIn({queue : false,duration : 500});
+            $('#softKeyModal').animate({top : offsettop + 150}, 500);
         }
         
          $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
