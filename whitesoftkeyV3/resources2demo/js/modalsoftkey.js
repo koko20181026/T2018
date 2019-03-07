@@ -43,9 +43,9 @@ $(document).ready(function() {
             $("#dummyT").append(dummyT);
             $('#dummyT').css('min-height', windowHeight + modalHeight + 'px');
 
-            $('#softKeyModal').css("top", offsettop + 1398);
-            $('#softKeyModal').fadeIn({queue : false,duration : 500});
-            $('#softKeyModal').animate({top : offsettop + 150}, 500);
+            $('#modal').css("top", offsettop + 1398);
+            $('#modal').fadeIn({queue : false,duration : 500});
+            $('#modal').animate({top : offsettop + 150}, 500);
         }
         
          $("#nameKeypad").keypad("option", {layout: kanaLayout02, target:$(key.target)});
