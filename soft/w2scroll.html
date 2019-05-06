@@ -6,7 +6,7 @@
   <meta author='' content=''>
   <meta keywords='' content=''>
   <meta description='' content=''>
-  <meta name="viewport" content="width=device-width,user-scalable=no">
+ 
   <title>白画面2(スクロール)</title>
   <link href="resources/css/common.css" rel="stylesheet" type="text/css" media="all" />
   <link rel="stylesheet" href="resources2demo/css/jquery.keypad.css" />
@@ -63,7 +63,7 @@ $( window ).load(function() {
 
 
 //        $('html, body').animate({scrollTop : offsettop}, 400);
-     $('body', parent.document).contents().animate({ scrollTop: offsettop },400);
+     $('html, body', parent.document).contents().animate({ scrollTop: offsettop },400);
         if ($("#modal").css("display") == "none") {
             $('#modal').css("top", offsettop + 1000);
             $('#modal').fadeIn({queue : false,duration : 300});
