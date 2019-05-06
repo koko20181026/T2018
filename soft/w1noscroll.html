@@ -71,7 +71,8 @@ $("input[type=text]").each(function(i,e){
 
         offsettop = $(key.target).offset().top;
 
-        $('html, body').animate({scrollTop : offsettop}, 400);
+        //$('html, body').animate({scrollTop : offsettop}, 400);
+   $('body', parent.document).contents().animate({ scrollTop: offsettop },400);
 
         if ($("#modal").css("display") == "none") {
             $('#modal').css("top", offsettop + 1000);
