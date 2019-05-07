@@ -17,14 +17,35 @@
   	
 	/* important:  dimensions or positioning here! */
 }
-  
+  div {
+    margin: 0px;
+    clear: both;
+    /* overflow: hidden; */
+}
+ #frame_wrapper {
+    height: 100%;
+}
+	iframe {
+    /* width: 1366px; */
+    width: 100%;
+    border: none;
+    vertical-align: bottom;
+}
+	body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+	#if_webView_ctrl {
+    height: 100%;
+}
  </style>
 </head>
 
 <body>
-	<div>
+	<div id="frame_wrapper">
  <!--  <div class="scroll-wrapper" style="width:100%; height:1024px;"> -->
-      <iframe  src="https://koko20181026.github.io/T2018/soft/iframe.html"></iframe>
+      <iframe id="if_webView_ctrl" src="https://koko20181026.github.io/T2018/soft/iframe.html"></iframe>
 </div>
 </body>
 
