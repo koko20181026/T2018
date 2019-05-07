@@ -63,7 +63,7 @@ $( window ).load(function() {
 
 
 //        $('html, body').animate({scrollTop : offsettop}, 400);
-     $('html, body', parent.document).contents().animate({ scrollTop: offsettop },400);
+     $('html, body', parent.parent.document).contents().animate({ scrollTop: offsettop },400);
         if ($("#modal").css("display") == "none") {
             $('#modal').css("top", offsettop + 1000);
             $('#modal').fadeIn({queue : false,duration : 300});
