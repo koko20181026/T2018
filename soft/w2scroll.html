@@ -66,7 +66,7 @@ $( window ).load(function() {
 
         if ($("#modal").css("display") == "none") {
      offsettop = $(key.target).offset().top;
-     $('html, body', parent.parent.document).contents().animate({ scrollTop: offsettop },400);
+     $('html, body', parent.parent.document).animate({ scrollTop: offsettop },400);
           
             $('#modal').css("top", offsettop + 1000);
             $('#modal').fadeIn({queue : false,duration : 300});
